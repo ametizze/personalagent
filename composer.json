@@ -1,0 +1,39 @@
+{
+    "name": "julio/personalagent",
+    "description": "Self-hosted AI personal assistant on Telegram (calendar, tasks, reminders, ideas, notes, finance, memory)",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Julio",
+            "email": "julioccpv@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "bot": "php bot.php",
+        "webhook": "php webhook.php",
+        "cron": "php cron/scheduler.php",
+        "migrate": "php cron/migrate.php",
+        "test": "vendor/bin/phpunit"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.10",
+        "longman/telegram-bot": "^0.83.1",
+        "openai-php/client": "^0.19.2",
+        "vlucas/phpdotenv": "^5.6",
+        "php-di/php-di": "^7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^13.1"
+    }
+}
